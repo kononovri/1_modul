@@ -10,11 +10,23 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
+            int sum = 0;
+            Console.WriteLine("Введите целое положительное число N");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            if (N >= 0)
             {
-                               Console.WriteLine("Квадрат числа {0} равен {1}", i, i * i);
+                for (int a = 1; a <= 2 * N - 1; a += 2)
+                {
+                    sum += a;
+
+                    Console.WriteLine("Текущее значение суммы равно {0}", sum);
+                }
+                Console.WriteLine("Квадрат числа {0} равен сумме квадратов целых чисел от 1 до {0} = {1}", N, N * N);
             }
-                Console.ReadKey();
+            else Console.WriteLine("Ошибка, вы ввели некорректное число");
+
+            Console.ReadKey();
         }
     }
 }
