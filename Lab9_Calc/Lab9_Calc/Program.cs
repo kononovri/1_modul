@@ -41,7 +41,7 @@ namespace Lab9_Calc
                         break;
                     default:
                         Console.WriteLine("Нет операции с указанным номером");
-                        1break;
+                        break;
                 }
             }
             catch (FormatException)
